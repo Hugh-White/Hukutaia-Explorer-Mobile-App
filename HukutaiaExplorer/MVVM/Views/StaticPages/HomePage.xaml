@@ -158,7 +158,7 @@
                         TextColor="Black"
                         FontFamily="PoppinsRegular"
                         FontSize="14"
-                        Text="Admin Login"
+                        Text="Create Plant"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
                         Margin="15, 65, 0, 24"
