@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HukutaiaExplorer.MVVM.Views.UploadView"
+             Title="UploadView">
+    <ScrollView>
+        <Grid Background="Black">
+            
+            <VerticalStackLayout Margin="0, 20, 0, 0">
+                <!--#region Plant Data Entry Fields -->
+                <Frame MaximumWidthRequest="380" 
+                       Margin="10, 5, 10, 10" 
+                       HeightRequest="50">
+                    <Entry x:Name="Name" 
+                           Style="{StaticResource GeneralEntry}" 
+                           Placeholder="Plant Name"/>
+                </Frame>
+
+                <Frame MaximumWidthRequest="380" 
+                       Margin="10, 5, 10, 10" 
+                       HeightRequest="50">
+                    <Entry x:Name="Authority" 
+                           Style="{StaticResource GeneralEntry}" 
+                           Placeholder="Plant Authority"/>
+                </Frame>
+
+                <Frame MaximumWidthRequest="380" 
+                       Margin="10, 5, 10, 10" 
+                       HeightRequest="50">
+                    <Entry x:Name="Family" 
+                           Style="{StaticResource GeneralEntry}" 
+                           Placeholder="Plant Family"/>
+                </Frame>
+
+                <Frame MaximumWidthRequest="380" 
+                       Margin="10, 5, 10, 10" 
+                       HeightRequest="50">
+                    <Entry x:Name="Description" 
+                           Style="{StaticResource GeneralEntry}" 
+                           Placeholder="Description"/>
+                </Frame>
+
+                <Frame MaximumWidthRequest="380" 
+                       Margin="10, 5, 10, 10" 
+                       HeightRequest="50">
+                    <Entry x:Name="Latitude" 
+                           Style="{StaticResource GeneralEntry}" 
+                           Placeholder="Latitude"/>
+                </Frame>
+
+                <Frame MaximumWidthRequest="380" 
+                       Margin="10, 5, 10, 10" 
+                       HeightRequest="50">
+                    <Entry x:Name="Longitude" 
+                           Style="{StaticResource GeneralEntry}" 
+                           Placeholder="Longitude"/>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region ImageSelect & Upload Buttons -->
+                <Button Style="{StaticResource BlueButtonTemp}" 
+                        x:Name="btn_SelectPic" 
+                        Text="Select Picture"
+                        Margin="30"/>
+
+                <Button Style="{StaticResource GreenButtonTemp}" 
+                        x:Name="btn_Upload" 
+                        Text="Upload"
+                        Margin="0, 15, 0, 0"/>
+                <!--#endregion-->
+            </VerticalStackLayout>
+        </Grid>
+        
+    </ScrollView>
+</ContentPage>

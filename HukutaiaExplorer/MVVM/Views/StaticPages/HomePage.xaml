@@ -147,7 +147,24 @@
                 </ContentView>
                 <!--#endregion-->
 
-                <!--#region Admin Log-in -->
+                <!--#region Admin Log-in & Create Plant button -->
+                <Button x:Name="btnCreatePlant"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        WidthRequest="122" 
+                        HeightRequest="39" 
+                        CornerRadius="10" 
+                        BackgroundColor="White" 
+                        TextColor="Black"
+                        FontFamily="PoppinsRegular"
+                        FontSize="14"
+                        Text="Admin Login"
+                        HorizontalOptions="Start"
+                        VerticalOptions="End"
+                        Margin="15, 65, 0, 24"
+                        Clicked="btnCreatePlant_Clicked"
+                        IsVisible="True"/>
+                
                 <Button x:Name="btnLogin"
                         Grid.Row="2"
                         Grid.Column="1"
