@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HukutaiaExplorer.MVVM.Views.PlantsView"
+             Title="Plants Collection"
+             NavigationPage.HasNavigationBar="True"
+             >
+    
+    <ScrollView>
+        <Grid Background="Transparent">
+            <!--<Image Source="darkleaves.jpg" Aspect="AspectFill" />-->
+            <Grid RowDefinitions=".1*, .9*"
+                  BackgroundColor="Black">
+            
+                <!--#region Search Bar -->
+                <Frame WidthRequest="313" 
+                       HeightRequest="36" 
+                       Margin="15, 10, 15, 10" 
+                       Grid.Row="0" 
+                       Grid.ColumnSpan="2" 
+                       BackgroundColor="Black" 
+                       BorderColor="Black" 
+                       VerticalOptions="Start" 
+                       CornerRadius="35">
+                
+                    <SearchBar TextColor="Black" 
+                               BackgroundColor="White" 
+                               Placeholder="Search" 
+                               HeightRequest="40" 
+                               WidthRequest="313" 
+                               HorizontalTextAlignment="Start" 
+                               Margin="30, 0, 30, 0" 
+                               HorizontalOptions="Center" 
+                               IsVisible="true"/>
+
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Collection View (Plant Cards) -->
+                <CollectionView Grid.Row="1"
+                ItemsSource="{Binding Plants}"
+                BackgroundColor="Transparent"
+                SelectionMode="None">
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+
+                            <Frame HeightRequest="130"
+                                   Margin="5, 10, 5, 10"
+                                   Padding="0">
+                          
+                                <Grid ColumnDefinitions=".4*, .6*">
+                                    <Image Grid.Column="0"
+                                            Source="{Binding Picture}"
+                                            Aspect="AspectFill"/>
+                                    <VerticalStackLayout Grid.Column="1">
+                                        <Label FontSize="Large"
+                                               FontFamily="PoppinsSemibold"
+                                               TextColor="Black"
+                                               Text="{Binding Name}"
+                                               Margin="8, 10, 0, 0"/>
+                                        <Label FontSize="Body"
+                                               FontFamily="PoppinsRegular"
+                                               TextColor="Black"
+                                               Text="{Binding Location}"
+                                               Margin="8, 0, 0, 0"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+                <!--#endregion-->
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

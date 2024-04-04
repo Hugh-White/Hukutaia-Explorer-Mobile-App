@@ -1,0 +1,57 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HukutaiaExplorer"
+             x:Class="HukutaiaExplorer.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="GreenButtonTemp" TargetType="Button">
+                <Setter Property="WidthRequest" Value="313" />
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="BackgroundColor" Value="#0ACF83" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontFamily" Value="PoppinsRegular"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+
+            <Style x:Key="EmailEntry" TargetType="Entry">
+                <Setter Property="HeightRequest" Value="48"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="Margin" Value="0, 10, 0, 10"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontFamily" Value="PoppinsRegular"/>
+                <Setter Property="PlaceholderColor" Value="LightGray"/>
+                <Setter Property="Keyboard" Value="Email"/>
+                <Setter Property="WidthRequest" Value="313"/>
+
+            </Style>
+
+            <Style x:Key="PasswordEntry" TargetType="Entry">
+                <Setter Property="IsPassword" Value="True"/>
+                <Setter Property="HeightRequest" Value="48"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="Margin" Value="0, 10, 0, 10"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontFamily" Value="PoppinsRegular"/>
+                <Setter Property="PlaceholderColor" Value="LightGray"/>
+                <Setter Property="Keyboard" Value="Default"/>
+                <Setter Property="WidthRequest" Value="313"/>
+            </Style>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
