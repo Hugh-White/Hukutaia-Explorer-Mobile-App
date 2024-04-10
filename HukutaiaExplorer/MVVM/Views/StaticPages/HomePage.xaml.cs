@@ -1,4 +1,6 @@
 
+using HukutaiaExplorer.MVVM.ViewModels;
+
 namespace HukutaiaExplorer.MVVM.Views.StaticPages;
 
 public partial class HomePage : ContentPage
