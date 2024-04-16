@@ -1,7 +1,9 @@
 ﻿namespace HukutaiaExplorer.MVVM.Models
 {
+    // Represents the model for user plant data
     public class UploadModel
     {
+        // Properties to hold user's plant details
         public string? Name { get; set; }
         public string? Authority { get; set; }
         public string? Family { get; set; }

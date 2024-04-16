@@ -3,8 +3,6 @@ using System;
 using Firebase.Auth;
 using HukutaiaExplorer.MVVM.Models;
 using HukutaiaExplorer.MVVM.Services;
-using CommunityToolkit.Mvvm.Input;
-using System.Windows.Input;
 
 namespace HukutaiaExplorer.MVVM.ViewModels
 {
@@ -16,7 +14,7 @@ namespace HukutaiaExplorer.MVVM.ViewModels
         public LoginModel Users { get; set; }
 
         // Command for login action
-        public ICommand LoginService { get; }
+        public Command LoginService { get; }
 
         // Constructor
         public LoginViewModel()
@@ -28,7 +26,7 @@ namespace HukutaiaExplorer.MVVM.ViewModels
             var loginService = new LoginService(Users);
 
             // Assign command to execute login service
-            LoginService = new RelayCommand(async () => await loginService.Execute());
+            LoginService = new Command(async () => await loginService.Execute());
         }
     }
 }

@@ -1,13 +1,16 @@
-using Firebase.Database;
-using HukutaiaExplorer.MVVM.Models;
+using HukutaiaExplorer.MVVM.ViewModels;
 
 namespace HukutaiaExplorer.MVVM.Views;
 
 public partial class UploadView : ContentPage
 {
-	public UploadView()
+    // Sets binding context for upload page
+    public UploadView()
 	{
 		InitializeComponent();
-	}
 
+        // Create instance of UploadViewModel and set as BindingContext
+        UploadViewModel viewModel = new UploadViewModel();
+        BindingContext = viewModel;
+    }
 }
