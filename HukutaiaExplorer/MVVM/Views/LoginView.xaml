@@ -39,22 +39,10 @@
                              Placeholder="Password" />
                 </Frame>
 
-                <!--Tap gesture recognizer within label element to trigger the process of Password Recovery-->
-                <Label x:Name="btnForgotPassword" 
-                         Text="Forgot Password?" 
-                         TextDecorations="Underline" 
-                         FontSize="15" TextColor="White" 
-                         FontFamily="PoppinsThinItalic"
-                         HorizontalOptions="Center" 
-                         Margin="0, 5, 0, 15">
-                    <!--<Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Label.GestureRecognizers>-->
-                </Label>
-
                 <!--This button is tied to the login process. Once credentials are filled out, button triggers credential check & log-in based on authentication. Button styled using app resources-->
                 <Button Style="{StaticResource GreenButtonTemp}" 
                           Command="{Binding LoginService}"
+                          Margin="10"
                           Text="Login"/>
             </VerticalStackLayout>
             <!--#endregion-->

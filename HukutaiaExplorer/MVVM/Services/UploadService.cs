@@ -15,7 +15,7 @@ namespace HukutaiaExplorer.MVVM.Services
         public UploadModel UploadModel;
 
         // Property to hold the image model
-        public ImageModel ImageModel;
+        public ImageModel ImageModel; 
         #endregion
 
         #region Private Properties
@@ -85,6 +85,8 @@ namespace HukutaiaExplorer.MVVM.Services
                     // Set image stream and file name
                     ImageModel.Stream = await result.OpenReadAsync();
                     ImageModel.FileName = result.FileName;
+                    // Sets picture string 
+                    UploadModel.Picture = ImageModel.FileName;
                     // Display success message
                     await Application.Current.MainPage.DisplayAlert("Image Selected!", $"Image: {result.FileName}", "Ok");
                 }
