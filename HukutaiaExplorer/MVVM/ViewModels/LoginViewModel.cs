@@ -25,8 +25,10 @@ namespace HukutaiaExplorer.MVVM.ViewModels
             // Create an instance of login service
             var loginService = new LoginService(Users);
 
-            // Assign command to execute login service
+            // Assign command to execute login service 
             LoginService = new Command(async () => await loginService.Execute());
+
+         
         }
     }
 }
