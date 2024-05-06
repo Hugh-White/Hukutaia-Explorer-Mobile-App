@@ -6,14 +6,16 @@
     <ScrollView>
         <Grid>
             <Image Source="darkpine.jpg" Aspect="AspectFill"/>
-            <Grid RowDefinitions="310, *"
+            <Grid 
                   ColumnDefinitions="*"
                   BackgroundColor="black"
                   RowSpacing="0"
                   Background="Transparent">
             
 
-                <VerticalStackLayout Grid.Row="0">
+                <VerticalStackLayout Grid.Row="0"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center">
                     <Label Text="Login" 
                            FontSize="24" 
                            TextColor="White" 
@@ -58,48 +60,7 @@
                 </VerticalStackLayout>
 
 
-                <VerticalStackLayout Grid.Row="1">
-
-                    <Label Text="Signup" 
-                           FontSize="24" 
-                           TextColor="White" 
-                           FontFamily="PoppinsRegular" 
-                           HorizontalOptions="Center"  
-                           Padding="15" 
-                           HeightRequest="70"/>
-
-                    <!--More boxed entry fields in frames and styling for clean code. Styled boxes, spacing and font to match UI Design-->
-                    <Frame MaximumWidthRequest="380" 
-                           Margin="10, 5, 10, 10" 
-                           HeightRequest="50">
-                        <Entry x:Name="EmailInput2" 
-                               Style="{StaticResource EmailEntry}" 
-                               Placeholder="Email"/>
-                    </Frame>
-
-                    <Frame MaximumWidthRequest="380" 
-                           Margin="10, 5, 10, 10" 
-                           HeightRequest="50">
-                        <Entry x:Name="P1_SignUp" 
-                               Placeholder="Create Password" 
-                               Style="{StaticResource PasswordEntry}" />
-                    </Frame>
-
-                    <Frame MaximumWidthRequest="380" 
-                           Margin="10, 5, 10, 10" 
-                           HeightRequest="50">
-                        <Entry x:Name="P2_SignUp"
-                               Placeholder="Confirm Password" 
-                               Style="{StaticResource PasswordEntry}"/>
-                    </Frame>
-
-
-                    <Button Style="{StaticResource GreenButtonTemp}" 
-                            x:Name="btn_Signup" 
-                            Clicked="btn_Signup_Clicked" 
-                            Text="Signup" 
-                            Margin="20" />
-                </VerticalStackLayout>
+               
             </Grid>
         </Grid>
     </ScrollView>

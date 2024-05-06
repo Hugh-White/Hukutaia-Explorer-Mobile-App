@@ -7,6 +7,7 @@ public partial class LoginView : ContentPage
 		InitializeComponent();
 	}
 
+    #region Event Handlers
     //Placeholders for button logic. Might not need in future if using commands and data binding.
     private void btn_Login_Clicked(object sender, EventArgs e)
     {
@@ -22,4 +23,5 @@ public partial class LoginView : ContentPage
     {
 
     }
+    #endregion
 }

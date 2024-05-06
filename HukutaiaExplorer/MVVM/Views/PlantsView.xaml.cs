@@ -11,6 +11,7 @@ public partial class PlantsView : ContentPage
 		BindingContext = viewModel;
 	}
 
+	//override method for OnAppearing to load plants for populating Collection View data template.
     protected override async void OnAppearing()
     {
         base.OnAppearing();
