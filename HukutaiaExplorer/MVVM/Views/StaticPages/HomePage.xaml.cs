@@ -1,12 +1,20 @@
+using HukutaiaExplorer.MVVM.Models;
+using HukutaiaExplorer.MVVM.Services;
+using HukutaiaExplorer.MVVM.ViewModels;
 
 namespace HukutaiaExplorer.MVVM.Views.StaticPages;
 
 public partial class HomePage : ContentPage
 {
-	public HomePage()
+    // Constructor
+    public HomePage() 
 	{
 		InitializeComponent();
-	}
+
+        // Create instance of LoginViewModel and set as BindingContext
+        LoginViewModel viewModel = new LoginViewModel();
+        BindingContext = viewModel;
+    }
 
     #region Navigation Button Events
     private async void btnGuide_Tapped(object sender, TappedEventArgs e)
@@ -38,8 +46,5 @@ public partial class HomePage : ContentPage
     {
         await Navigation.PushAsync(new UploadView());
     }
-    
     #endregion
-
-    
 }

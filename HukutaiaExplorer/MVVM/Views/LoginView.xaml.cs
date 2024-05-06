@@ -1,27 +1,17 @@
+using HukutaiaExplorer.MVVM.ViewModels;
+
 namespace HukutaiaExplorer.MVVM.Views;
 
 public partial class LoginView : ContentPage
 {
+	// Sets binding context for login page
 	public LoginView()
 	{
 		InitializeComponent();
-	}
 
-    #region Event Handlers
-    //Placeholders for button logic. Might not need in future if using commands and data binding.
-    private void btn_Login_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void btn_Signup_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
-    {
-
+        // Create instance of loginViewModel and set as BindingContext
+        LoginViewModel viewModel = new LoginViewModel();
+        BindingContext = viewModel;
     }
     #endregion
 }

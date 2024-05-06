@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HukutaiaExplorer.MVVM.Views.UploadView"
-             Title="Create A Plant">
+             Title="Create a plant">
     <ScrollView>
         <Grid Background="Black">
             
@@ -11,7 +11,8 @@
                 <Frame MaximumWidthRequest="380" 
                        Margin="10, 5, 10, 10" 
                        HeightRequest="50">
-                    <Entry x:Name="Name" 
+                    <Entry Text="{Binding Upload.Name}"
+                           x:Name="Name" 
                            Style="{StaticResource GeneralEntry}" 
                            Placeholder="Plant Name"/>
                 </Frame>
@@ -19,7 +20,8 @@
                 <Frame MaximumWidthRequest="380" 
                        Margin="10, 5, 10, 10" 
                        HeightRequest="50">
-                    <Entry x:Name="Authority" 
+                    <Entry Text="{Binding Upload.Authority}"
+                           x:Name="Authority" 
                            Style="{StaticResource GeneralEntry}" 
                            Placeholder="Plant Authority"/>
                 </Frame>
@@ -27,7 +29,8 @@
                 <Frame MaximumWidthRequest="380" 
                        Margin="10, 5, 10, 10" 
                        HeightRequest="50">
-                    <Entry x:Name="Family" 
+                    <Entry Text="{Binding Upload.Family}"
+                           x:Name="Family" 
                            Style="{StaticResource GeneralEntry}" 
                            Placeholder="Plant Family"/>
                 </Frame>
@@ -35,7 +38,8 @@
                 <Frame MaximumWidthRequest="380" 
                        Margin="10, 5, 10, 10" 
                        HeightRequest="50">
-                    <Entry x:Name="Description" 
+                    <Entry Text="{Binding Upload.Description}"
+                           x:Name="Description" 
                            Style="{StaticResource GeneralEntry}" 
                            Placeholder="Description"/>
                 </Frame>
@@ -43,7 +47,8 @@
                 <Frame MaximumWidthRequest="380" 
                        Margin="10, 5, 10, 10" 
                        HeightRequest="50">
-                    <Entry x:Name="Latitude" 
+                    <Entry Text="{Binding Upload.Latitude}"
+                           x:Name="Latitude" 
                            Style="{StaticResource GeneralEntry}" 
                            Placeholder="Latitude"/>
                 </Frame>
@@ -51,20 +56,23 @@
                 <Frame MaximumWidthRequest="380" 
                        Margin="10, 5, 10, 10" 
                        HeightRequest="50">
-                    <Entry x:Name="Longitude" 
+                    <Entry Text="{Binding Upload.Longitude}"
+                           x:Name="Longitude" 
                            Style="{StaticResource GeneralEntry}" 
                            Placeholder="Longitude"/>
                 </Frame>
                 <!--#endregion-->
 
                 <!--#region ImageSelect & Upload Buttons -->
-                <Button Style="{StaticResource BlueButtonTemp}" 
-                        x:Name="btn_SelectPic" 
+                <Button Command="{Binding PickImageCommand}"
+                        Style="{StaticResource BlueButtonTemp}" 
+                        x:Name="btn_pickImage" 
                         Text="Select Picture"
                         Margin="30"/>
 
-                <Button Style="{StaticResource GreenButtonTemp}" 
-                        x:Name="btn_Upload" 
+                <Button Command="{Binding CreateCommand}"
+                        Style="{StaticResource GreenButtonTemp}" 
+                        x:Name="btn_Create" 
                         Text="Upload"
                         Margin="0, 15, 0, 0"/>
                 <!--#endregion-->

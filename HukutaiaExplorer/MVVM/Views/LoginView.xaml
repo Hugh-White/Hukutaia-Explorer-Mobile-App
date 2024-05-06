@@ -3,15 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HukutaiaExplorer.MVVM.Views.LoginView"
              Title="Admin Login">
-    <ScrollView>
-        <Grid>
-            <Image Source="darkpine.jpg" Aspect="AspectFill"/>
-            <Grid 
-                  ColumnDefinitions="*"
-                  BackgroundColor="black"
-                  RowSpacing="0"
-                  Background="Transparent">
-            
+
+    <Grid>
+        <Image Source="darkpine.jpg" Aspect="AspectFill"/>
+        <Grid 
+          BackgroundColor="black"
+          Background="Transparent"
+          RowDefinitions="800,*"
+          ColumnDefinitions="*">
+
 
                 <VerticalStackLayout Grid.Row="0"
                                      HorizontalOptions="Center"
@@ -24,41 +24,29 @@
                            Padding="15"
                            />
 
-                    <!--Boxed entry fields in frames and styled entry fields in app resources to clean code. Styled boxes, spacing and font to match UI.-->
-                    <Frame MaximumWidthRequest="380" 
-                           Margin="10, 5, 10, 10" 
-                           HeightRequest="50">
-                        <Entry x:Name="EmailInput" 
-                               Style="{StaticResource EmailEntry}" 
-                               Placeholder="Email"/>
-                    </Frame>
-                    <Frame MaximumWidthRequest="380" 
-                           Margin="10, 5, 10, 10" 
-                           HeightRequest="50">
-                        <Entry Placeholder="Password" 
-                               Style="{StaticResource PasswordEntry}"/>
-                    </Frame>
+                <!--Boxed entry fields in frames and styled entry fields in app resources to clean code. Styled boxes, spacing and font to match UI.-->
+                <Frame MaximumWidthRequest="380" 
+                         Margin="10, 5, 10, 10" 
+                         HeightRequest="50">
+                    <Entry Text="{Binding Users.Emails}"
+                             Style="{StaticResource EmailEntry}" 
+                             Placeholder="Email"/>
+                </Frame>
+                <Frame MaximumWidthRequest="380" 
+                         Margin="10, 5, 10, 10" 
+                         HeightRequest="50">
+                    <Entry Text="{Binding Users.Password}"
+                             Style="{StaticResource PasswordEntry}"
+                             Placeholder="Password" />
+                </Frame>
 
-                    <!--Tap gesture recognizer within label element to trigger the process of Password Recovery-->
-                    <Label x:Name="btnForgotPassword" 
-                           Text="Forgot Password?" 
-                           TextDecorations="Underline" 
-                           FontSize="15" TextColor="White" 
-                           FontFamily="PoppinsThinItalic"
-                           HorizontalOptions="Center" 
-                           Margin="0, 5, 0, 15">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                        </Label.GestureRecognizers>
-                    </Label>
-
-                    <!--This button is tied to the login process. Once credentials are filled out, button triggers credential check & log-in based on authentication. Button styled using app resources-->
-                    <Button Style="{StaticResource GreenButtonTemp}" 
-                            x:Name="btn_Login" 
-                            Clicked="btn_Login_Clicked" 
-                            Text="Login"/>
-                </VerticalStackLayout>
-
+                <!--This button is tied to the login process. Once credentials are filled out, button triggers credential check & log-in based on authentication. Button styled using app resources-->
+                <Button Style="{StaticResource GreenButtonTemp}" 
+                          Command="{Binding LoginService}"
+                          Margin="10"
+                          Text="Login"/>
+            </VerticalStackLayout>
+            <!--#endregion-->
 
                
             </Grid>

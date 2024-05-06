@@ -154,8 +154,9 @@
                         WidthRequest="122" 
                         HeightRequest="39" 
                         CornerRadius="10" 
-                        BackgroundColor="White" 
-                        TextColor="Black"
+                        BackgroundColor="#0ACF83" 
+                        TextColor="White"
+                        BorderColor="White"
                         FontFamily="PoppinsRegular"
                         FontSize="14"
                         Text="Create Plant"
@@ -163,7 +164,7 @@
                         VerticalOptions="End"
                         Margin="15, 65, 0, 24"
                         Clicked="btnCreatePlant_Clicked"
-                        IsVisible="True"/>
+                        IsVisible="{Binding Users.IsCreatePlantButtonVisible}"/>
                 
                 <Button x:Name="btnLogin"
                         Grid.Row="2"

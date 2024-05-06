@@ -1,4 +1,7 @@
 ﻿using HukutaiaExplorer.MVVM.Views.StaticPages;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using HukutaiaExplorer.MVVM.Models;
 
 namespace HukutaiaExplorer
 {
