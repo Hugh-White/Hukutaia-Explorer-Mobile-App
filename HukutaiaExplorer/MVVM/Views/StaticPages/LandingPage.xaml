@@ -1,57 +1,85 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HukutaiaExplorer.MVVM.Views.StaticPages.LandingPage"
-             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
-             NavigationPage.HasNavigationBar="False"
-             >
-             
+<ContentPage
+    x:Class="HukutaiaExplorer.MVVM.Views.StaticPages.LandingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+    NavigationPage.HasNavigationBar="False">
+
     <Page.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="Black" />
     </Page.Behaviors>
 
     <ScrollView>
-        <Grid RowDefinitions="320, *" ColumnDefinitions="*">
+        <Grid ColumnDefinitions="*" RowDefinitions="320, *">
             <!--#region Image SlideShow-->
-            <CarouselView HeightRequest="380" 
-                          x:Name="slideShow"
-                          IndicatorView="indicatorView">
+            <CarouselView
+                x:Name="slideShow"
+                HeightRequest="380"
+                IndicatorView="indicatorView">
                 <CarouselView.ItemsSource>
                     <x:Array Type="{x:Type Image}">
-                        <Image Source="leaves.jpg"/>
-                        <Image Source="huk1.png"/>
-                        <Image Source="huk2.png"/>
-                        <Image Source="hukdo.png"/>
-                        <Image Source="darkpine.jpg"/>
+                        <Image Source="leaves.jpg" />
+                        <Image Source="huk1.png" />
+                        <Image Source="huk2.png" />
+                        <Image Source="hukdo.png" />
+                        <Image Source="darkpine.jpg" />
                     </x:Array>
                 </CarouselView.ItemsSource>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Image Source="{Binding Source}" 
-                               Aspect="AspectFill"/>
+                        <Image Aspect="AspectFill" Source="{Binding Source}" />
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
-            
 
-            <Border StrokeMiterLimit="29" Grid.Row="1" Stroke="White" StrokeShape="RoundRectangle 35 35 0 0" Grid.RowSpan="3"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Black" HeightRequest="500">
-                <IndicatorView x:Name="indicatorView" IndicatorSize="7" SelectedIndicatorColor="White" IndicatorColor="DarkGray" HorizontalOptions="Center" VerticalOptions="Start" Margin="0, 30, 0, 0" />
+
+            <Border
+                Grid.Row="1"
+                Grid.RowSpan="3"
+                BackgroundColor="Black"
+                HeightRequest="500"
+                HorizontalOptions="FillAndExpand"
+                Stroke="White"
+                StrokeMiterLimit="29"
+                StrokeShape="RoundRectangle 35 35 0 0"
+                VerticalOptions="StartAndExpand">
+                <IndicatorView
+                    x:Name="indicatorView"
+                    Margin="0,30,0,0"
+                    HorizontalOptions="Center"
+                    IndicatorColor="DarkGray"
+                    IndicatorSize="7"
+                    SelectedIndicatorColor="White"
+                    VerticalOptions="Start" />
             </Border>
             <!--#endregion-->
 
             <VerticalStackLayout Grid.Row="1">
 
-                <Label Text="Hukutaia Explorer" FontSize="24" TextColor="White" FontFamily="PoppinsRegular" HorizontalOptions="Center"  Padding="0, 67, 0, 23"/>
+                <Label
+                    Padding="0,67,0,23"
+                    FontFamily="PoppinsRegular"
+                    FontSize="24"
+                    HorizontalOptions="Center"
+                    Text="Hukutaia Explorer"
+                    TextColor="White" />
 
-                <Label Text="Welcome to the Hukutaia Domain. &#10;Press Start below to begin your journey." 
-                       FontSize="16" 
-                       TextColor="White" 
-                       FontFamily="PoppinsRegular"
-                       HorizontalOptions="Center" 
-                       Padding="0, 0, 0, 121"
-                       HorizontalTextAlignment="Center"/>
+                <Label
+                    Padding="0,0,0,121"
+                    FontFamily="PoppinsRegular"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Welcome to the Hukutaia Domain. &#10;Press Start below to begin your journey."
+                    TextColor="White" />
 
-                <Button Style="{StaticResource GreenButtonTemp}" x:Name="btn_Start" Clicked="btn_Start_Clicked" CornerRadius="10" Text="START" />
+                <Button
+                    x:Name="btn_Start"
+                    Clicked="btn_Start_Clicked"
+                    CornerRadius="10"
+                    Style="{StaticResource GreenButtonTemp}"
+                    Text="START" />
 
             </VerticalStackLayout>
 

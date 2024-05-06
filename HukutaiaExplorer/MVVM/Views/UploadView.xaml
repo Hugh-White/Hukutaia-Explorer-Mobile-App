@@ -1,83 +1,98 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HukutaiaExplorer.MVVM.Views.UploadView"
-             Title="Create a plant">
+<ContentPage
+    x:Class="HukutaiaExplorer.MVVM.Views.UploadView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Create a plant">
     <ScrollView>
         <Grid Background="Black">
-            
-            <VerticalStackLayout Margin="0, 20, 0, 0">
-                <!--#region Plant Data Entry Fields -->
-                <Frame MaximumWidthRequest="380" 
-                       Margin="10, 5, 10, 10" 
-                       HeightRequest="50">
-                    <Entry Text="{Binding Upload.Name}"
-                           x:Name="Name" 
-                           Style="{StaticResource GeneralEntry}" 
-                           Placeholder="Plant Name"/>
+
+            <VerticalStackLayout Margin="0,20,0,0">
+                <!--#region Plant Data Entry Fields-->
+                <Frame
+                    Margin="10,5,10,10"
+                    HeightRequest="50"
+                    MaximumWidthRequest="380">
+                    <Entry
+                        x:Name="Name"
+                        Placeholder="Plant Name"
+                        Style="{StaticResource GeneralEntry}"
+                        Text="{Binding Upload.Name}" />
                 </Frame>
 
-                <Frame MaximumWidthRequest="380" 
-                       Margin="10, 5, 10, 10" 
-                       HeightRequest="50">
-                    <Entry Text="{Binding Upload.Authority}"
-                           x:Name="Authority" 
-                           Style="{StaticResource GeneralEntry}" 
-                           Placeholder="Plant Authority"/>
+                <Frame
+                    Margin="10,5,10,10"
+                    HeightRequest="50"
+                    MaximumWidthRequest="380">
+                    <Entry
+                        x:Name="Authority"
+                        Placeholder="Plant Authority"
+                        Style="{StaticResource GeneralEntry}"
+                        Text="{Binding Upload.Authority}" />
                 </Frame>
 
-                <Frame MaximumWidthRequest="380" 
-                       Margin="10, 5, 10, 10" 
-                       HeightRequest="50">
-                    <Entry Text="{Binding Upload.Family}"
-                           x:Name="Family" 
-                           Style="{StaticResource GeneralEntry}" 
-                           Placeholder="Plant Family"/>
+                <Frame
+                    Margin="10,5,10,10"
+                    HeightRequest="50"
+                    MaximumWidthRequest="380">
+                    <Entry
+                        x:Name="Family"
+                        Placeholder="Plant Family"
+                        Style="{StaticResource GeneralEntry}"
+                        Text="{Binding Upload.Family}" />
                 </Frame>
 
-                <Frame MaximumWidthRequest="380" 
-                       Margin="10, 5, 10, 10" 
-                       HeightRequest="50">
-                    <Entry Text="{Binding Upload.Description}"
-                           x:Name="Description" 
-                           Style="{StaticResource GeneralEntry}" 
-                           Placeholder="Description"/>
+                <Frame
+                    Margin="10,5,10,10"
+                    HeightRequest="50"
+                    MaximumWidthRequest="380">
+                    <Entry
+                        x:Name="Description"
+                        Placeholder="Description"
+                        Style="{StaticResource GeneralEntry}"
+                        Text="{Binding Upload.Description}" />
                 </Frame>
 
-                <Frame MaximumWidthRequest="380" 
-                       Margin="10, 5, 10, 10" 
-                       HeightRequest="50">
-                    <Entry Text="{Binding Upload.Latitude}"
-                           x:Name="Latitude" 
-                           Style="{StaticResource GeneralEntry}" 
-                           Placeholder="Latitude"/>
+                <Frame
+                    Margin="10,5,10,10"
+                    HeightRequest="50"
+                    MaximumWidthRequest="380">
+                    <Entry
+                        x:Name="Latitude"
+                        Placeholder="Latitude"
+                        Style="{StaticResource GeneralEntry}"
+                        Text="{Binding Upload.Latitude}" />
                 </Frame>
 
-                <Frame MaximumWidthRequest="380" 
-                       Margin="10, 5, 10, 10" 
-                       HeightRequest="50">
-                    <Entry Text="{Binding Upload.Longitude}"
-                           x:Name="Longitude" 
-                           Style="{StaticResource GeneralEntry}" 
-                           Placeholder="Longitude"/>
+                <Frame
+                    Margin="10,5,10,10"
+                    HeightRequest="50"
+                    MaximumWidthRequest="380">
+                    <Entry
+                        x:Name="Longitude"
+                        Placeholder="Longitude"
+                        Style="{StaticResource GeneralEntry}"
+                        Text="{Binding Upload.Longitude}" />
                 </Frame>
                 <!--#endregion-->
 
-                <!--#region ImageSelect & Upload Buttons -->
-                <Button Command="{Binding PickImageCommand}"
-                        Style="{StaticResource BlueButtonTemp}" 
-                        x:Name="btn_pickImage" 
-                        Text="Select Picture"
-                        Margin="30"/>
+                <!--#region ImageSelect & Upload Buttons-->
+                <Button
+                    x:Name="btn_pickImage"
+                    Margin="30"
+                    Command="{Binding PickImageCommand}"
+                    Style="{StaticResource BlueButtonTemp}"
+                    Text="Select Picture" />
 
-                <Button Command="{Binding CreateCommand}"
-                        Style="{StaticResource GreenButtonTemp}" 
-                        x:Name="btn_Create" 
-                        Text="Upload"
-                        Margin="0, 15, 0, 0"/>
+                <Button
+                    x:Name="btn_Create"
+                    Margin="0,15,0,0"
+                    Command="{Binding CreateCommand}"
+                    Style="{StaticResource GreenButtonTemp}"
+                    Text="Upload" />
                 <!--#endregion-->
             </VerticalStackLayout>
         </Grid>
-        
+
     </ScrollView>
 </ContentPage>

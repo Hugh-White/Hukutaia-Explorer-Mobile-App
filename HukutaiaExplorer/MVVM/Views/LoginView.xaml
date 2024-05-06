@@ -1,55 +1,61 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HukutaiaExplorer.MVVM.Views.LoginView"
-             Title="Admin Login">
+<ContentPage
+    x:Class="HukutaiaExplorer.MVVM.Views.LoginView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Admin Login">
 
     <Grid>
-        <Image Source="darkpine.jpg" Aspect="AspectFill"/>
-        <Grid 
-          BackgroundColor="black"
-          Background="Transparent"
-          RowDefinitions="800,*"
-          ColumnDefinitions="*">
+        <Image Aspect="AspectFill" Source="darkpine.jpg" />
+        <Grid
+            Background="Transparent"
+            BackgroundColor="black"
+            ColumnDefinitions="*"
+            RowDefinitions="800,*">
 
 
-                <VerticalStackLayout Grid.Row="0"
-                                     HorizontalOptions="Center"
-                                     VerticalOptions="Center">
-                    <Label Text="Login" 
-                           FontSize="24" 
-                           TextColor="White" 
-                           FontFamily="PoppinsSemibold"
-                           HorizontalOptions="Center"  
-                           Padding="15"
-                           />
+            <VerticalStackLayout
+                Grid.Row="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Label
+                    Padding="15"
+                    FontFamily="PoppinsSemibold"
+                    FontSize="24"
+                    HorizontalOptions="Center"
+                    Text="Login"
+                    TextColor="White" />
 
-                <!--Boxed entry fields in frames and styled entry fields in app resources to clean code. Styled boxes, spacing and font to match UI.-->
-                <Frame MaximumWidthRequest="380" 
-                         Margin="10, 5, 10, 10" 
-                         HeightRequest="50">
-                    <Entry Text="{Binding Users.Emails}"
-                             Style="{StaticResource EmailEntry}" 
-                             Placeholder="Email"/>
+                <!--  Boxed entry fields in frames and styled entry fields in app resources to clean code. Styled boxes, spacing and font to match UI.  -->
+                <Frame
+                    Margin="10,5,10,10"
+                    HeightRequest="50"
+                    MaximumWidthRequest="380">
+                    <Entry
+                        Placeholder="Email"
+                        Style="{StaticResource EmailEntry}"
+                        Text="{Binding Users.Emails}" />
                 </Frame>
-                <Frame MaximumWidthRequest="380" 
-                         Margin="10, 5, 10, 10" 
-                         HeightRequest="50">
-                    <Entry Text="{Binding Users.Password}"
-                             Style="{StaticResource PasswordEntry}"
-                             Placeholder="Password" />
+                <Frame
+                    Margin="10,5,10,10"
+                    HeightRequest="50"
+                    MaximumWidthRequest="380">
+                    <Entry
+                        Placeholder="Password"
+                        Style="{StaticResource PasswordEntry}"
+                        Text="{Binding Users.Password}" />
                 </Frame>
 
-                <!--This button is tied to the login process. Once credentials are filled out, button triggers credential check & log-in based on authentication. Button styled using app resources-->
-                <Button Style="{StaticResource GreenButtonTemp}" 
-                          Command="{Binding LoginService}"
-                          Margin="10"
-                          Text="Login"/>
+                <!--  This button is tied to the login process. Once credentials are filled out, button triggers credential check & log-in based on authentication. Button styled using app resources  -->
+                <Button
+                    Margin="10"
+                    Command="{Binding LoginService}"
+                    Style="{StaticResource GreenButtonTemp}"
+                    Text="Login" />
             </VerticalStackLayout>
             <!--#endregion-->
 
-               
-            </Grid>
+
         </Grid>
-    </ScrollView>
+    </Grid>
 </ContentPage>

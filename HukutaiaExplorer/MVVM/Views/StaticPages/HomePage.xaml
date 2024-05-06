@@ -1,190 +1,220 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HukutaiaExplorer.MVVM.Views.StaticPages.HomePage"
-             Title="Hukutaia Explorer">
+<ContentPage
+    x:Class="HukutaiaExplorer.MVVM.Views.StaticPages.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Hukutaia Explorer">
     <ScrollView>
         <Grid>
             <!--<Image Source="darkleaves.jpg" Aspect="AspectFill" />-->
-            <Grid RowDefinitions="*, *, *" 
-                  ColumnDefinitions=".5*, .5*"
-                  BackgroundColor="Black">
-            
-                <!--#region Trail Guide -->
-                <ContentView  x:Name="btnGuide" 
-                              HeightRequest="277" 
-                              WidthRequest="165"
-                              Grid.Row="0"
-                              Grid.Column="0" 
-                              Margin="0, 30, 0, 30">
-                    <Frame Padding="0.8"  
-                           BackgroundColor="White" 
-                           CornerRadius="10" BorderColor="White" 
-                           HasShadow="False">
-                
+            <Grid
+                BackgroundColor="Black"
+                ColumnDefinitions=".5*, .5*"
+                RowDefinitions="*, *, *">
+
+                <!--#region Trail Guide-->
+                <ContentView
+                    x:Name="btnGuide"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0,30,0,30"
+                    HeightRequest="277"
+                    WidthRequest="165">
+                    <Frame
+                        Padding="0.8"
+                        BackgroundColor="White"
+                        BorderColor="White"
+                        CornerRadius="10"
+                        HasShadow="False">
+
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="btnGuide_Tapped" />
                         </Frame.GestureRecognizers>
 
                         <Grid>
-                            <Image Source="huk1.png" 
-                                   VerticalOptions="Start"/>
-                            <RoundRectangle CornerRadius="0, 0, 10, 10" 
-                                            Fill="White" HeightRequest="73" 
-                                            WidthRequest="175" 
-                                            VerticalOptions="End"/>
-                            <Label Text="Trail Guide" 
-                                   TextColor="Black" 
-                                   FontSize="16" 
-                                   Margin="15,8,0,0" 
-                                   VerticalOptions="End" 
-                                   FontFamily="PoppinsRegular" 
-                                   HorizontalTextAlignment="Start" 
-                                   Padding="0, 0, 30, 40"/>
+                            <Image Source="huk1.png" VerticalOptions="Start" />
+                            <RoundRectangle
+                                CornerRadius="0, 0, 10, 10"
+                                Fill="White"
+                                HeightRequest="73"
+                                VerticalOptions="End"
+                                WidthRequest="175" />
+                            <Label
+                                Margin="15,8,0,0"
+                                Padding="0,0,30,40"
+                                FontFamily="PoppinsRegular"
+                                FontSize="16"
+                                HorizontalTextAlignment="Start"
+                                Text="Trail Guide"
+                                TextColor="Black"
+                                VerticalOptions="End" />
                         </Grid>
-                    
+
                     </Frame>
                 </ContentView>
                 <!--#endregion-->
 
-                <!--#region Plant Collection -->
-                <ContentView x:Name="btnPlants" 
-                             HeightRequest="277" 
-                             WidthRequest="165"
-                             Grid.Row="0" 
-                             Grid.Column="1"
-                             Margin="0, 30, 0, 30">
-                    <Frame Padding="0.8"
-                           BackgroundColor="White" 
-                           CornerRadius="10" 
-                           BorderColor="White" 
-                           HasShadow="False">
+                <!--#region Plant Collection-->
+                <ContentView
+                    x:Name="btnPlants"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="0,30,0,30"
+                    HeightRequest="277"
+                    WidthRequest="165">
+                    <Frame
+                        Padding="0.8"
+                        BackgroundColor="White"
+                        BorderColor="White"
+                        CornerRadius="10"
+                        HasShadow="False">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="btnPlants_Tapped" />
                         </Frame.GestureRecognizers>
 
                         <Grid>
-                            <Image Source="huk2.png" VerticalOptions="Start"/>
-                            <RoundRectangle CornerRadius="0, 0, 10, 10" Fill="White" HeightRequest="73" WidthRequest="169" VerticalOptions="End"/>
-                            <Label Text="Plant Collection" TextColor="Black" FontSize="16" Margin="15,8,0,0" VerticalOptions="End" FontFamily="PoppinsRegular" HorizontalTextAlignment="Start" Padding="0, 0, 30, 18"/>
+                            <Image Source="huk2.png" VerticalOptions="Start" />
+                            <RoundRectangle
+                                CornerRadius="0, 0, 10, 10"
+                                Fill="White"
+                                HeightRequest="73"
+                                VerticalOptions="End"
+                                WidthRequest="169" />
+                            <Label
+                                Margin="15,8,0,0"
+                                Padding="0,0,30,18"
+                                FontFamily="PoppinsRegular"
+                                FontSize="16"
+                                HorizontalTextAlignment="Start"
+                                Text="Plant Collection"
+                                TextColor="Black"
+                                VerticalOptions="End" />
                         </Grid>
                     </Frame>
                 </ContentView>
                 <!--#endregion-->
 
-                <!--#region About Us -->
-                <ContentView  x:Name="btnAbout" 
-                              HeightRequest="277" 
-                              WidthRequest="165"
-                              Grid.Row="1" 
-                              Grid.Column="0">
-                    <Frame Padding="0.8" 
-                    
-                           BackgroundColor="White" 
-                           CornerRadius="10" 
-                           BorderColor="White" 
-                           HasShadow="False">
+                <!--#region About Us-->
+                <ContentView
+                    x:Name="btnAbout"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    HeightRequest="277"
+                    WidthRequest="165">
+                    <Frame
+                        Padding="0.8"
+                        BackgroundColor="White"
+                        BorderColor="White"
+                        CornerRadius="10"
+                        HasShadow="False">
 
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="btnAbout_Tapped" />
                         </Frame.GestureRecognizers>
 
                         <Grid>
-                            <Image Source="aboutUs.png" 
-                                   VerticalOptions="Start"/>
-                            <RoundRectangle CornerRadius="0, 0, 10, 10" 
-                                            Fill="White" 
-                                            HeightRequest="73" 
-                                            WidthRequest="169" 
-                                            VerticalOptions="End"/>
-                            <Label Text="About Us" 
-                                   TextColor="Black" 
-                                   FontSize="16" 
-                                   Margin="15, 8, 0, 22" 
-                                   VerticalOptions="End" 
-                                   FontFamily="PoppinsRegular" 
-                                   HorizontalTextAlignment="Start" 
-                                   Padding="0, 0, 30, 18"/>
+                            <Image Source="aboutUs.png" VerticalOptions="Start" />
+                            <RoundRectangle
+                                CornerRadius="0, 0, 10, 10"
+                                Fill="White"
+                                HeightRequest="73"
+                                VerticalOptions="End"
+                                WidthRequest="169" />
+                            <Label
+                                Margin="15,8,0,22"
+                                Padding="0,0,30,18"
+                                FontFamily="PoppinsRegular"
+                                FontSize="16"
+                                HorizontalTextAlignment="Start"
+                                Text="About Us"
+                                TextColor="Black"
+                                VerticalOptions="End" />
                         </Grid>
                     </Frame>
                 </ContentView>
                 <!--#endregion-->
 
-                <!--#region Website -->
-                <ContentView x:Name="btnWeb" 
-                             HeightRequest="277" 
-                             WidthRequest="165" 
-                             Grid.Row="1" 
-                             Grid.Column="1">
+                <!--#region Website-->
+                <ContentView
+                    x:Name="btnWeb"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HeightRequest="277"
+                    WidthRequest="165">
 
-                    <Frame Padding="0.8" 
-                           BackgroundColor="White" 
-                           CornerRadius="10" 
-                           BorderColor="White" 
-                           HasShadow="False">
+                    <Frame
+                        Padding="0.8"
+                        BackgroundColor="White"
+                        BorderColor="White"
+                        CornerRadius="10"
+                        HasShadow="False">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="btnWeb_Tapped" />
                         </Frame.GestureRecognizers>
 
                         <Grid>
-                            <Image Source="hukdo.png" VerticalOptions="Start"/>
-                            <RoundRectangle CornerRadius="0, 0, 10, 10" 
-                                            Fill="White" 
-                                            HeightRequest="73" 
-                                            WidthRequest="169" 
-                                            VerticalOptions="End" 
-                                            Aspect="Fill"/>
-                            <Label Text="Website" 
-                                   TextColor="Black" 
-                                   FontSize="16" 
-                                   Margin="15,8,0,0" 
-                                   VerticalOptions="End" 
-                                   FontFamily="PoppinsRegular" 
-                                   HorizontalTextAlignment="Start" 
-                                   Padding="0, 0, 30, 40"/>
+                            <Image Source="hukdo.png" VerticalOptions="Start" />
+                            <RoundRectangle
+                                Aspect="Fill"
+                                CornerRadius="0, 0, 10, 10"
+                                Fill="White"
+                                HeightRequest="73"
+                                VerticalOptions="End"
+                                WidthRequest="169" />
+                            <Label
+                                Margin="15,8,0,0"
+                                Padding="0,0,30,40"
+                                FontFamily="PoppinsRegular"
+                                FontSize="16"
+                                HorizontalTextAlignment="Start"
+                                Text="Website"
+                                TextColor="Black"
+                                VerticalOptions="End" />
                         </Grid>
                     </Frame>
                 </ContentView>
                 <!--#endregion-->
 
-                <!--#region Admin Log-in & Create Plant button -->
-                <Button x:Name="btnCreatePlant"
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        WidthRequest="122" 
-                        HeightRequest="39" 
-                        CornerRadius="10" 
-                        BackgroundColor="#0ACF83" 
-                        TextColor="White"
-                        BorderColor="White"
-                        FontFamily="PoppinsRegular"
-                        FontSize="14"
-                        Text="Create Plant"
-                        HorizontalOptions="Start"
-                        VerticalOptions="End"
-                        Margin="15, 65, 0, 24"
-                        Clicked="btnCreatePlant_Clicked"
-                        IsVisible="{Binding Users.IsCreatePlantButtonVisible}"/>
-                
-                <Button x:Name="btnLogin"
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        WidthRequest="122" 
-                        HeightRequest="39" 
-                        CornerRadius="10" 
-                        BackgroundColor="White" 
-                        TextColor="Black"
-                        FontFamily="PoppinsRegular"
-                        FontSize="14"
-                        Text="Admin Login"
-                        Clicked="btnLogin_Clicked"
-                        HorizontalOptions="End"
-                        VerticalOptions="End"
-                        Margin="0, 65, 15, 24"/>
+                <!--#region Admin Log-in & Create Plant button-->
+                <Button
+                    x:Name="btnCreatePlant"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="15,65,0,24"
+                    BackgroundColor="#0ACF83"
+                    BorderColor="White"
+                    Clicked="btnCreatePlant_Clicked"
+                    CornerRadius="10"
+                    FontFamily="PoppinsRegular"
+                    FontSize="14"
+                    HeightRequest="39"
+                    HorizontalOptions="Start"
+                    IsVisible="{Binding Users.IsCreatePlantButtonVisible}"
+                    Text="Create Plant"
+                    TextColor="White"
+                    VerticalOptions="End"
+                    WidthRequest="122" />
+
+                <Button
+                    x:Name="btnLogin"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="0,65,15,24"
+                    BackgroundColor="White"
+                    Clicked="btnLogin_Clicked"
+                    CornerRadius="10"
+                    FontFamily="PoppinsRegular"
+                    FontSize="14"
+                    HeightRequest="39"
+                    HorizontalOptions="End"
+                    Text="Admin Login"
+                    TextColor="Black"
+                    VerticalOptions="End"
+                    WidthRequest="122" />
                 <!--#endregion-->
-        
-        
+
+
             </Grid>
         </Grid>
-    </ScrollView>   
+    </ScrollView>
 </ContentPage>

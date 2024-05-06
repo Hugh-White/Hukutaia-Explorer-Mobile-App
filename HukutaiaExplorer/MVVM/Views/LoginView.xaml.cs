@@ -4,8 +4,9 @@ namespace HukutaiaExplorer.MVVM.Views;
 
 public partial class LoginView : ContentPage
 {
-	// Sets binding context for login page
-	public LoginView()
+    #region Constructor
+    // Sets binding context for login page
+    public LoginView()
 	{
 		InitializeComponent();
 

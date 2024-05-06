@@ -1,48 +1,58 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HukutaiaExplorer.MVVM.Views.StaticPages.AboutPage"
-             Title="About Us">
+<ContentPage
+    x:Class="HukutaiaExplorer.MVVM.Views.StaticPages.AboutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="About Us">
 
     <ScrollView>
-        <Grid RowDefinitions="320, *"
-              ColumnDefinitions="*"
-              BackgroundColor="black">
+        <Grid
+            BackgroundColor="black"
+            ColumnDefinitions="*"
+            RowDefinitions="320, *">
 
-            <!--#region Image SlideShow -->
-            <CarouselView HeightRequest="380"
-                          x:Name="slideShow">
+            <!--#region Image SlideShow-->
+            <CarouselView x:Name="slideShow" HeightRequest="380">
                 <CarouselView.ItemsSource>
                     <x:Array Type="{x:Type Image}">
-                        <Image Source="leaves.jpg"/>
-                        <Image Source="huk1.png"/>
-                        <Image Source="huk2.png"/>
-                        <Image Source="hukdo.png"/>
+                        <Image Source="leaves.jpg" />
+                        <Image Source="huk1.png" />
+                        <Image Source="huk2.png" />
+                        <Image Source="hukdo.png" />
                     </x:Array>
                 </CarouselView.ItemsSource>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Image Source="{Binding Source}" Aspect="AspectFill"/>
+                        <Image Aspect="AspectFill" Source="{Binding Source}" />
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
             <!--#endregion-->
 
-            <!--#region Border & Body Text -->
-            <Border StrokeMiterLimit="29" Grid.Row="1" Stroke="White" StrokeShape="RoundRectangle 35 35 0 0" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Black" HeightRequest="650">
-            </Border>
+            <!--#region Border & Body Text-->
+            <Border
+                Grid.Row="1"
+                Grid.RowSpan="3"
+                BackgroundColor="Black"
+                HeightRequest="650"
+                HorizontalOptions="FillAndExpand"
+                Stroke="White"
+                StrokeMiterLimit="29"
+                StrokeShape="RoundRectangle 35 35 0 0"
+                VerticalOptions="StartAndExpand" />
 
             <VerticalStackLayout Grid.Row="1">
-                <Label Text="The Hukutaia Domain ranks as one of Opotiki's main attractions. &#10;&#10;It is a 5 hectare remnant of extensive native forest that was set aside as a reserve by one of the original owners Mr E.M. Hutchinson in the early 1900's. &#10;&#10;Mr Norman Potts was instrumental in developing the reserve with walking tracks and touring all over New Zealand (plus outlying islands) gathering rare and endangered plants some of which now form a very valuable botanical collection. Mr Mark Heginbotham followed on with My Potts work. &#10;&#10;Of particular interest is the estimated 2000 to 2500 year old giant Puriri tree. Being hollow the tree was used as a resting place for the bones of Distinguished Dead of the Upokorehe Iwi (Tribe). The tree named Taketakerau was highly tapu (Sacred). Local resident Marnie Anstis has written a book entitled The Millennium Tree which is based on the life of Taketakerau." 
-                   FontSize="16" 
-                   TextColor="White" 
-                   FontFamily="Poppins-Regular"
-                   HorizontalOptions="Center" 
-                   Padding="15"
-                   HorizontalTextAlignment="Center"/>
+                <Label
+                    Padding="15"
+                    FontFamily="Poppins-Regular"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="The Hukutaia Domain ranks as one of Opotiki's main attractions. &#10;&#10;It is a 5 hectare remnant of extensive native forest that was set aside as a reserve by one of the original owners Mr E.M. Hutchinson in the early 1900's. &#10;&#10;Mr Norman Potts was instrumental in developing the reserve with walking tracks and touring all over New Zealand (plus outlying islands) gathering rare and endangered plants some of which now form a very valuable botanical collection. Mr Mark Heginbotham followed on with My Potts work. &#10;&#10;Of particular interest is the estimated 2000 to 2500 year old giant Puriri tree. Being hollow the tree was used as a resting place for the bones of Distinguished Dead of the Upokorehe Iwi (Tribe). The tree named Taketakerau was highly tapu (Sacred). Local resident Marnie Anstis has written a book entitled The Millennium Tree which is based on the life of Taketakerau."
+                    TextColor="White" />
             </VerticalStackLayout>
             <!--#endregion-->
-            
+
         </Grid>
     </ScrollView>
 
