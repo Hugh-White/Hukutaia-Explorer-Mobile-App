@@ -21,7 +21,7 @@
                     CornerRadius="35"
                     HeightRequest="36"
                     VerticalOptions="Start"
-                    WidthRequest="313">
+                    WidthRequest="350">
 
                     <SearchBar
                         Margin="30,0,30,0"
@@ -30,9 +30,10 @@
                         HorizontalOptions="Center"
                         HorizontalTextAlignment="Start"
                         IsVisible="true"
-                        Placeholder="Search"
+                        Placeholder="Search Plants"
+                        TextChanged="SearchBar_TextChanged"
                         TextColor="Black"
-                        WidthRequest="313" />
+                        WidthRequest="350" />
 
                 </Frame>
                 <!--#endregion-->
@@ -41,7 +42,7 @@
                 <CollectionView
                     Grid.Row="1"
                     BackgroundColor="Transparent"
-                    ItemsSource="{Binding Plants}"
+                    ItemsSource="{Binding FilteredPlants}"
                     SelectionMode="None">
 
                     <CollectionView.ItemTemplate>
@@ -50,7 +51,8 @@
                             <Frame
                                 Margin="5,10,5,10"
                                 Padding="0"
-                                HeightRequest="130">
+                                HeightRequest="130"
+                                WidthRequest="350">
 
                                 <Grid ColumnDefinitions=".4*, .6*">
                                     <Image

@@ -20,6 +20,9 @@ namespace HukutaiaExplorer.MVVM.ViewModels
         #region Propeties
         //Public property to be returned or viewed outside of ViewModel
         public List<Plant>? Plants { get; set; }
+
+        // New property to store filtered plants
+        public List<Plant>? FilteredPlants { get; set; }
         #endregion
 
         #region Constructor
@@ -29,16 +32,36 @@ namespace HukutaiaExplorer.MVVM.ViewModels
         public PlantsViewModel() 
         {
             //No need to await here
-           LoadPlantsAsync();
+            LoadPlantsAsync();
         }
         #endregion
 
-        #region LoadPlantsAsync Task
+        #region Methods
         //Described above in constructor comments
         public async Task LoadPlantsAsync()
         {
             PlantService plantService = new PlantService();
             Plants = await plantService.GetPlants();
+
+            // Initialize FilteredPlants with all plants initially
+            FilteredPlants = Plants;
+        }
+
+        // Method to filter plants based on search query
+        public void FilterPlants(string searchQuery)
+        {
+            if (string.IsNullOrWhiteSpace(searchQuery))
+            {
+                // If search query is empty, show all plants
+                FilteredPlants = Plants;
+            }
+            else
+            {
+                // Filter plants based on search query
+                FilteredPlants = Plants?.Where(plant =>
+                    plant.Name?.ToLower().Contains(searchQuery.ToLower()) == true ||
+                    plant.Location?.ToLower().Contains(searchQuery.ToLower()) == true).ToList();
+            }
         }
         #endregion
     }
