@@ -58,9 +58,8 @@ namespace HukutaiaExplorer.MVVM.ViewModels
             else
             {
                 // Filter plants based on search query
-                FilteredPlants = Plants?.Where(plant =>
-                    plant.Name?.ToLower().Contains(searchQuery.ToLower()) == true ||
-                    plant.Location?.ToLower().Contains(searchQuery.ToLower()) == true).ToList();
+                FilteredPlants = Plants?.Where(plant => 
+                plant.Name?.ToLower().Contains(searchQuery.ToLower()) == true).ToList();
             }
         }
         #endregion
