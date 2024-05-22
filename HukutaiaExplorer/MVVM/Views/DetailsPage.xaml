@@ -6,36 +6,43 @@
     Title="{Binding Plant.Name}">
 
 
-    <ScrollView>
-        <Grid BackgroundColor="black" RowDefinitions="Auto,Auto,*">
+
+    <Grid BackgroundColor="black" RowDefinitions="2*, 1*">
 
             <Image
+                Grid.Row="0"
                 Aspect="AspectFill"
-                HeightRequest="260"
                 Source="{Binding Plant.Picture}" />
+        
 
+        <ScrollView Grid.Row="1" Margin=" 0, -15, 0, 0" Padding="0">
+            <Frame
+                Padding="0"
+                BackgroundColor="Black"
+                BorderColor="Transparent"
+                CornerRadius="15">
+                <VerticalStackLayout Padding="20" Spacing="10">
+                    <Label
+                        FontFamily="PoppinsSemibold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Plant.Authority, StringFormat='Authority: {0}'}"
+                        TextColor="White" />
+                    <Label
+                        FontFamily="PoppinsSemibold"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Plant.Family, StringFormat='Family: {0}'}"
+                        TextColor="White" />
+                    <Label
+                        FontFamily="PoppinsSemibold"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Plant.Description}"
+                        TextColor="White" />
 
-            <VerticalStackLayout
-                Grid.Row="2"
-                Padding="20"
-                Spacing="10">
-
-                <Label
-                    FontFamily="PoppinsSemibold"
-                    FontSize="Medium"
-                    Text="{Binding Plant.Description}"
-                    TextColor="White" />
-                <Label
-                    FontFamily="PoppinsSemibold"
-                    FontSize="Small"
-                    Text="{Binding Plant.Authority, StringFormat='Authority: {0}'}"
-                    TextColor="White" />
-                <Label
-                    FontFamily="PoppinsSemibold"
-                    FontSize="Small"
-                    Text="{Binding Plant.Family, StringFormat='Family: {0}'}"
-                    TextColor="White" />
-            </VerticalStackLayout>
-        </Grid>
-    </ScrollView>
+                </VerticalStackLayout>
+            </Frame>
+        </ScrollView>
+    </Grid>
 </ContentPage>

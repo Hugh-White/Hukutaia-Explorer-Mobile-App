@@ -65,6 +65,9 @@
 	  <None Remove="Resources\Fonts\Poppins-Thin.ttf" />
 	  <None Remove="Resources\Images\burialtree.jpg" />
 	  <None Remove="Resources\Images\burialtree2.jpg" />
+	  <None Remove="Resources\Images\huk1.jpg" />
+	  <None Remove="Resources\Images\huk2.jpg" />
+	  <None Remove="Resources\Images\huk3.jpg" />
 	  <None Remove="Resources\Images\hukBell.jpg" />
 	  <None Remove="Resources\Images\hukBerry.jpg" />
 	  <None Remove="Resources\Images\hukdom.jpg" />

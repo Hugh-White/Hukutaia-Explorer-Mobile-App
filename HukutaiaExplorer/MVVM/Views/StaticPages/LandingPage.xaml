@@ -19,10 +19,10 @@
                 IndicatorView="indicatorView">
                 <CarouselView.ItemsSource>
                     <x:Array Type="{x:Type Image}">
+                        <Image Source="burialtree.png" />
                         <Image Source="hukberry.jpg" />
                         <Image Source="hukflower.png" />
                         <Image Source="hukmacro.png" />
-                        <Image Source="burialtree.png" />
                         <Image Source="burialtree2.png" />
                         <Image Source="hukbell.png" />
                         <Image Source="hukforest.png" />
