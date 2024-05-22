@@ -3,6 +3,7 @@ using Firebase.Auth;
 using Firebase.Auth.Providers;
 using HukutaiaExplorer.MVVM.ViewModels;
 using HukutaiaExplorer.MVVM.Views;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 
 namespace HukutaiaExplorer

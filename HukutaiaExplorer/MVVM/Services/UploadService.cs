@@ -11,6 +11,10 @@ namespace HukutaiaExplorer.MVVM.Services
     public class UploadService
     {
         #region Properties/Models
+        // Private connection string
+        private const string FirebaseClientString = "https://hukutaia-domain-default-rtdb.asia-southeast1.firebasedatabase.app/";
+        private const string FirebaseStorageString = "hukutaia-domain.appspot.com";
+
         // Property to hold the upload model
         public UploadModel UploadModel;
 
@@ -34,9 +38,9 @@ namespace HukutaiaExplorer.MVVM.Services
             ImageModel = imageModel;
 
             // Initialize Firebase client for database interaction 
-            firebaseClient = new FirebaseClient("https://hukutaia-domain-default-rtdb.asia-southeast1.firebasedatabase.app/");
+            firebaseClient = new FirebaseClient(FirebaseClientString);
             // Initialize Firebase storage for uplaoding images
-            firebaseStorage = new FirebaseStorage("hukutaia-domain.appspot.com");
+            firebaseStorage = new FirebaseStorage(FirebaseStorageString);
         }
         #endregion
 
