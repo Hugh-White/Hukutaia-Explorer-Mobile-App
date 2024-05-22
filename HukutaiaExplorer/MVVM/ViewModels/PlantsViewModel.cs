@@ -1,16 +1,15 @@
-﻿using HukutaiaExplorer.MVVM.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using HukutaiaExplorer.MVVM.Models;
 using HukutaiaExplorer.MVVM.Services;
+using HukutaiaExplorer.MVVM.Views;
 using PropertyChanged;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HukutaiaExplorer.MVVM.ViewModels
 {
     [AddINotifyPropertyChangedInterface]
-    public class PlantsViewModel
+    public partial class PlantsViewModel 
     {
         #region Fields
         //Private field to be used within ViewModel
@@ -37,7 +36,29 @@ namespace HukutaiaExplorer.MVVM.ViewModels
         #endregion
 
         #region Methods
-        //Described above in constructor comments
+        // Navigates to plant details page
+        [RelayCommand]
+        public async Task GoToDetailsAsync(Plant plant)
+        {
+            // Check if the provided plant is null.
+            if (plant == null) 
+                return;
+
+            // Create a new instance of PlantDetailsViewModel.
+            var detailsViewModel = new PlantDetailsViewModel();
+            // Set the Plant property of the PlantDetailsViewModel to the provided plant.
+            detailsViewModel.Plant = plant;
+
+            // Create a new instance of DetailsPage.
+            var detailsPage = new DetailsPage();
+            // Set the BindingContext of the DetailsPage to the PlantDetailsViewModel instance.
+            detailsPage.BindingContext = detailsViewModel;
+
+            // Navigate to the DetailsPage using traditional navigation.
+            await Application.Current.MainPage.Navigation.PushAsync(detailsPage);
+        }
+
+        // Described above in constructor comments
         public async Task LoadPlantsAsync()
         {
             PlantService plantService = new PlantService();

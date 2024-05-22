@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="HukutaiaExplorer.MVVM.Views.DetailsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Plant.Name}">
+
+
+    <ScrollView>
+        <Grid BackgroundColor="black" RowDefinitions="Auto,Auto,*">
+
+            <Image
+                Aspect="AspectFill"
+                HeightRequest="260"
+                Source="{Binding Plant.Picture}" />
+
+
+            <VerticalStackLayout
+                Grid.Row="2"
+                Padding="20"
+                Spacing="10">
+
+                <Label
+                    FontFamily="PoppinsSemibold"
+                    FontSize="Medium"
+                    Text="{Binding Plant.Description}"
+                    TextColor="White" />
+                <Label
+                    FontFamily="PoppinsSemibold"
+                    FontSize="Small"
+                    Text="{Binding Plant.Authority, StringFormat='Authority: {0}'}"
+                    TextColor="White" />
+                <Label
+                    FontFamily="PoppinsSemibold"
+                    FontSize="Small"
+                    Text="{Binding Plant.Family, StringFormat='Family: {0}'}"
+                    TextColor="White" />
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
