@@ -3,11 +3,62 @@
     x:Class="HukutaiaExplorer.MVVM.Views.GuideView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="GuideView">
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-    </VerticalStackLayout>
+    xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+    Title="Trail Guide">
+
+    <ScrollView BackgroundColor="Black">
+
+
+        <Grid
+            Margin="0"
+            Padding="0"
+            HeightRequest="650"
+            RowDefinitions="2.75*, 1*, 1.25*"
+            VerticalOptions="Center">
+            <Image
+                Grid.Row="0"
+                Aspect="AspectFill"
+                Source="{Binding PinImage}" />
+
+            <ScrollView Grid.Row="1">
+                <Frame
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="Black"
+                    BorderColor="Transparent">
+                    <Label
+                        x:Name="pinLabel"
+                        Margin="5,5,5,20"
+                        FontFamily="Poppins-Regular"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding PinDetails}"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+
+                </Frame>
+            </ScrollView>
+
+            <Frame
+                Grid.Row="2"
+                Margin="0"
+                Padding="0"
+                BackgroundColor="Transparent"
+                CornerRadius="5">
+                <maps:Map
+                    x:Name="hukMap"
+                    HeightRequest="250"
+                    IsShowingUser="True"
+                    IsZoomEnabled="False"
+                    MapType="Satellite"
+                    />
+            </Frame>
+
+
+
+        </Grid>
+
+    </ScrollView>
 </ContentPage>

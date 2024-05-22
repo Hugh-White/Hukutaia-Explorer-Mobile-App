@@ -6,11 +6,9 @@
     Title="Hukutaia Explorer">
     <ScrollView>
         <Grid>
+            <Image Aspect="AspectFill" Source="hukmacro" />
             <!--<Image Source="darkleaves.jpg" Aspect="AspectFill" />-->
-            <Grid
-                BackgroundColor="Black"
-                ColumnDefinitions=".5*, .5*"
-                RowDefinitions="*, *, *">
+            <Grid ColumnDefinitions=".5*, .5*" RowDefinitions="*, *, *">
 
                 <!--#region Trail Guide-->
                 <ContentView
@@ -32,7 +30,15 @@
                         </Frame.GestureRecognizers>
 
                         <Grid>
-                            <Image Source="huk1.png" VerticalOptions="Start" />
+                            <Frame
+                                Padding="0"
+                                CornerRadius="10"
+                                HeightRequest="274">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="btnGuide_Tapped" />
+                                </Frame.GestureRecognizers>
+                                <Image Aspect="AspectFill" Source="hukforest" />
+                            </Frame>
                             <RoundRectangle
                                 CornerRadius="0, 0, 10, 10"
                                 Fill="White"
@@ -73,7 +79,15 @@
                         </Frame.GestureRecognizers>
 
                         <Grid>
-                            <Image Source="huk2.png" VerticalOptions="Start" />
+                            <Frame
+                                Padding="0"
+                                CornerRadius="10"
+                                HeightRequest="274">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="btnPlants_Tapped" />
+                                </Frame.GestureRecognizers>
+                                <Image Aspect="AspectFill" Source="hukred" />
+                            </Frame>
                             <RoundRectangle
                                 CornerRadius="0, 0, 10, 10"
                                 Fill="White"
@@ -113,7 +127,15 @@
                         </Frame.GestureRecognizers>
 
                         <Grid>
-                            <Image Source="aboutUs.png" VerticalOptions="Start" />
+                            <Frame
+                                Padding="0"
+                                CornerRadius="10"
+                                HeightRequest="274">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="btnAbout_Tapped" />
+                                </Frame.GestureRecognizers>
+                                <Image Aspect="AspectFill" Source="hukdom" />
+                            </Frame>
                             <RoundRectangle
                                 CornerRadius="0, 0, 10, 10"
                                 Fill="White"
@@ -153,7 +175,15 @@
                         </Frame.GestureRecognizers>
 
                         <Grid>
-                            <Image Source="hukdo.png" VerticalOptions="Start" />
+                            <Frame
+                                Padding="0"
+                                CornerRadius="10"
+                                HeightRequest="274">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="btnWeb_Tapped" />
+                                </Frame.GestureRecognizers>
+                                <Image Aspect="AspectFill" Source="burialtree" />
+                            </Frame>
                             <RoundRectangle
                                 Aspect="Fill"
                                 CornerRadius="0, 0, 10, 10"

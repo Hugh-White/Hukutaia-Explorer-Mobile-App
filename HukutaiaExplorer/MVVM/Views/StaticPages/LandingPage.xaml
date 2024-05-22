@@ -19,11 +19,18 @@
                 IndicatorView="indicatorView">
                 <CarouselView.ItemsSource>
                     <x:Array Type="{x:Type Image}">
-                        <Image Source="leaves.jpg" />
-                        <Image Source="huk1.png" />
-                        <Image Source="huk2.png" />
-                        <Image Source="hukdo.png" />
-                        <Image Source="darkpine.jpg" />
+                        <Image Source="hukberry.jpg" />
+                        <Image Source="hukflower.png" />
+                        <Image Source="hukmacro.png" />
+                        <Image Source="burialtree.png" />
+                        <Image Source="burialtree2.png" />
+                        <Image Source="hukbell.png" />
+                        <Image Source="hukforest.png" />
+                        <Image Source="hukred.png" />
+                        <Image Source="huksprout.png" />
+                        <Image Source="huktree.png" />
+                        <Image Source="huktree2.png" />
+                        <Image Source="hukdom.png" />
                     </x:Array>
                 </CarouselView.ItemsSource>
                 <CarouselView.ItemTemplate>

@@ -6,22 +6,21 @@
     Title="Admin Login">
 
     <Grid>
-        <Image Aspect="AspectFill" Source="darkpine.jpg" />
+        <Image Aspect="AspectFill" Source="burialtree" />
         <Grid
             Background="Transparent"
             BackgroundColor="black"
             ColumnDefinitions="*"
-            RowDefinitions="800,*">
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
 
 
-            <VerticalStackLayout
-                Grid.Row="0"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
+
+            <VerticalStackLayout Grid.Row="0" Margin="0,0,0,200">
                 <Label
                     Padding="15"
-                    FontFamily="PoppinsSemibold"
-                    FontSize="24"
+                    FontFamily="Poppins-Semibold"
+                    FontSize="40"
                     HorizontalOptions="Center"
                     Text="Login"
                     TextColor="White" />
@@ -52,7 +51,9 @@
                     Command="{Binding LoginService}"
                     Style="{StaticResource GreenButtonTemp}"
                     Text="Login" />
+
             </VerticalStackLayout>
+
             <!--#endregion-->
 
 

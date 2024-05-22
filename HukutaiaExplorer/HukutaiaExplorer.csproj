@@ -47,7 +47,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -57,34 +56,47 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiAsset Remove="Resources\Raw\hukWalk.csv" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Thin.ttf" />
-	  <None Remove="Resources\Images\aboutus.png" />
-	  <None Remove="Resources\Images\bggradient.jpg" />
-	  <None Remove="Resources\Images\bggradient1.svg" />
-	  <None Remove="Resources\Images\darkfern.jpg" />
-	  <None Remove="Resources\Images\darkfern1.jpg" />
-	  <None Remove="Resources\Images\darkleaves.jpg" />
-	  <None Remove="Resources\Images\darkpine.jpg" />
-	  <None Remove="Resources\Images\huk1.png" />
-	  <None Remove="Resources\Images\huk2.png" />
-	  <None Remove="Resources\Images\hukdo.png" />
-	  <None Remove="Resources\Images\leaves.jpg" />
+	  <None Remove="Resources\Images\burialtree.jpg" />
+	  <None Remove="Resources\Images\burialtree2.jpg" />
+	  <None Remove="Resources\Images\hukBell.jpg" />
+	  <None Remove="Resources\Images\hukBerry.jpg" />
+	  <None Remove="Resources\Images\hukdom.jpg" />
+	  <None Remove="Resources\Images\hukFlower.jpg" />
+	  <None Remove="Resources\Images\hukForest.jpg" />
+	  <None Remove="Resources\Images\hukMacro.jpg" />
+	  <None Remove="Resources\Images\hukRed.jpg" />
+	  <None Remove="Resources\Images\hukSprout.jpg" />
+	  <None Remove="Resources\Images\hukTree.jpg" />
+	  <None Remove="Resources\Images\hukTree2.jpg" />
 	  <None Remove="Resources\Images\searchicon.png" />
+	  <None Remove="Resources\Raw\hukWalk.csv" />
 	  <None Remove="Resources\raw\plantdata.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Raw\hukWalk.csv" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="CsvHelper" Version="32.0.3" />
 		<PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
 		<PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
 		<PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.21" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.21" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.40" />
 		<PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.21" />
+		<PackageReference Include="Microsoft.Maui.Maps" Version="8.0.40" />
 		<PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
 	</ItemGroup>
 
