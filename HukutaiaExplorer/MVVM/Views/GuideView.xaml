@@ -18,6 +18,7 @@
             <Image
                 Grid.Row="0"
                 Aspect="AspectFill"
+                Margin="0"
                 Source="{Binding PinImage}" />
 
             <ScrollView Grid.Row="1">
@@ -26,6 +27,7 @@
                     Padding="0"
                     BackgroundColor="Black"
                     BorderColor="Transparent">
+
                     <Label
                         x:Name="pinLabel"
                         Margin="5,5,5,20"
@@ -45,14 +47,15 @@
                 Grid.Row="2"
                 Margin="0"
                 Padding="0"
-                BackgroundColor="Transparent"
-                CornerRadius="5">
+                BorderColor="White"
+                CornerRadius="5"
+                >
                 <maps:Map
                     x:Name="hukMap"
-                    HeightRequest="250"
                     IsShowingUser="True"
                     IsZoomEnabled="False"
                     MapType="Satellite"
+                    
                     />
             </Frame>
 

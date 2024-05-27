@@ -6,7 +6,7 @@
     Title="Create a plant">
     <ScrollView>
         <Grid Background="Black">
-
+            <Image Aspect="AspectFill" Source="hukmacro" />
             <VerticalStackLayout Margin="0,20,0,0">
                 <!--#region Plant Data Entry Fields-->
                 <Frame

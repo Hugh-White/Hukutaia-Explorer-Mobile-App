@@ -10,8 +10,8 @@
     <ScrollView>
         <Grid Background="Transparent">
             <!--<Image Source="darkleaves.jpg" Aspect="AspectFill" />-->
-            <Grid BackgroundColor="Black" RowDefinitions=".1*, .9*">
-
+            <Grid BackgroundColor="#000000" RowDefinitions=".1*, .9*">
+                <Image Aspect="AspectFill" Source="hukmacro" />
                 <!--#region Search Bar-->
                 <Frame
                     Grid.Row="0"
@@ -21,7 +21,7 @@
                     BorderColor="Black"
                     CornerRadius="35"
                     HeightRequest="36"
-                    VerticalOptions="Start"
+                    VerticalOptions="Center"
                     WidthRequest="350">
 
                     <SearchBar
