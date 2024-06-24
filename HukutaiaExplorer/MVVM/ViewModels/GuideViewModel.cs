@@ -84,21 +84,44 @@ namespace HukutaiaExplorer.MVVM.ViewModels
         {
             var locations = new List<GuideModel>();
 
-            // Get the stream of the CSV file from the raw resources
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-            var stream = assembly.GetManifestResourceStream("HukutaiaExplorer.Resources.Raw.hukWalk.csv");
-
-            if (stream == null)
+            try
             {
-                // Handle the case where the stream is null
-                throw new FileNotFoundException("The CSV file 'hukWalk.csv' was not found in the resources.");
+                // Get the stream of the CSV file from the raw resources
+                var assembly = typeof(App).GetTypeInfo().Assembly;
+                var stream = assembly.GetManifestResourceStream("HukutaiaExplorer.Resources.Raw.hukWalk.csv");
+
+                if (stream == null)
+                {
+                    // Handle the case where the stream is null
+                    throw new FileNotFoundException("The CSV file 'hukWalk.csv' was not found in the resources.");
+                }
+
+                using (var reader = new StreamReader(stream))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    locations = csv.GetRecords<GuideModel>().ToList();
+                }
+                
+            }
+            catch (FileNotFoundException ex)
+            {
+                // Handle the FileNotFoundException specifically
+                // Log the exception, show an error message, etc.
+                Console.WriteLine(ex.Message);
+            }
+            catch (CsvHelperException ex)
+            {
+                // Handle exceptions related to CSV parsing
+                // Log the exception, show an error message, etc.
+                Console.WriteLine("Error parsing CSV file: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Handle any other exceptions that might occur
+                // Log the exception, show an error message, etc.
+                Console.WriteLine("An unexpected error occurred: " + ex.Message);
             }
 
-            using (var reader = new StreamReader(stream))
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-            {
-                locations = csv.GetRecords<GuideModel>().ToList();
-            }
             return locations;
         }
         #endregion
