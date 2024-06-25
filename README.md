@@ -34,37 +34,65 @@ This application was designed to fill the knowledge gap between the general publ
 
 <h2>Environments Used </h2>
 
-- <b>Visual Studio</b> (21H2)
+- <b>Visual Studio</b>
 
-<!--
-<h2>Program walk-through:</h2>
+<h2>App Screenshots/Visual Walkthrough:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <table>
+    <tr>
+      <td align="center" valign="top" width="25%">
+        <b>Landing Page</b><br>
+        <img src="https://i.imgur.com/7OrVBwg.jpg" alt="Landing Page" width="100%">
+      </td>
+      <td align="center" valign="top" width="25%">
+        <b>Home Page</b><br>
+        <img src="https://i.imgur.com/Q7YcznX.jpg" alt="Home Page" width="100%">
+      </td>
+      <td align="center" valign="top" width="25%">
+        <b>Trail Guide Page</b><br>
+        <img src="https://i.imgur.com/k9hFCXq.jpg" alt="Trail Guide Page" width="100%">
+      </td>
+      <td align="center" valign="top" width="25%">
+        <b>Plant Collection Page</b><br>
+        <img src="https://i.imgur.com/SJy5nSx.jpg" alt="Plant Collection Page" width="100%">
+      </td>
+    </tr>
+    <tr>
+       <td align="center" valign="top" width="25">
+        <b>Plant Details Page</b><br>
+        <img src="https://i.imgur.com/tp8Vhvv.jpg" alt="Plant Details Page" width="100%">
+      </td>
+      <td align="center" valign="top" width="25%">
+        <b>About Us Page</b><br>
+        <img src="https://i.imgur.com/2zAN4cw.jpg" alt="About Us Page" width="100%">
+      </td>
+      <td align="center" valign="top" width="25">
+        <b>BCA Website Link</b><br>
+        <img src="https://i.imgur.com/ixNp6q3.jpg" alt="BCA Website Link" width="100%">
+      </td>
+      <td align="center" valign="top" width="25">
+        <b>Admin Log-In Button</b><br>
+        <img src="https://i.imgur.com/iYxUNUv.jpg" alt="Admin Log-In Button" width="100%">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="25">
+        <b>Log-In Page</b><br>
+        <img src="https://i.imgur.com/3nOChip.jpg" alt="Log-In Page" width="100%">
+      </td>
+      <td align="center" valign="top" width="25%">
+        <b>Authentication Message</b><br>
+        <img src="https://i.imgur.com/WoZK6GQ.jpg" alt="Authentication Message" width="100%">
+      </td>
+      <td align="center" valign="top" width="25">
+        <b>Create A Plant Button</b><br>
+        <img src="https://i.imgur.com/1yNarHR.jpg" alt="Create A Plant Button" width="100%">
+      </td>
+      <td align="center" valign="top" width="25">
+        <b>Create A Plant Form</b><br>
+        <img src="https://i.imgur.com/CQt3cUm.jpg" alt="BCA Website Link" width="100%">
+      </td>
+    </tr>
+  </table>
 </p>
---!>
